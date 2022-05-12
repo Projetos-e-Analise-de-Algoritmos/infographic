@@ -77,3 +77,4 @@ O Algoritmo Edmon-Karps define especificamente como buscar os caminhos aumentant
 - [3] https://en.wikipedia.org/wiki/Ford%E2%80%93Fulkerson_algorithm
 - [4] https://www.cs.cmu.edu/~avrim/451f08/
 - [5] http://www.cs.cmu.edu/~15451/
+- [6] https://pt.m.wikipedia.org/wiki/Algoritmo_de_Edmonds-Karp
