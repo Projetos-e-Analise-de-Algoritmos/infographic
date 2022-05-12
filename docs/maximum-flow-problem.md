@@ -29,7 +29,15 @@ O valor (_value_), ou saldo, de um fluxo $f$, denotado por $|f|$, é definido da
 
 ## Múltiplas entradas/saídas
 
-TODO
+Existem cenários que possuem múltiplas fontes $\{s_1, s_2, \dots, s_m\}$ e múltiplos sorvedouros $\{t_1, t_2, \dots, t_n\}$. Apesar de parecer uma tarefa complexa, podemos reduzir tais problemas em problemas que possuem uma única fonte e um único sorvedouro utilizando _supersource_ e _supersink_.
+
+Nesse cenário, criamos uma nova fonte $s$, chamada de _supersource_, que possui arestas para cada uma das fontes originais $s_i$ com capacidade $c(s, s_i) = \infty$. Analogamente, criamos um novo sorvedouro $t$, chamado de _supersink_, que possui arestas chegando de cada um dos sorvedouros originais com capacidade $c(t_i, t) = \infty$.
+
+![Exemplo de conversão](imgs/example-multiple-sink-source.png)
+
+## Definição formal: Fluxo Máximo
+
+> Dado um grafo de rede $G$, encontre um fluxo $f$ tal que $|f|$ é máximo. Em outras palavras, encontrar $\argmax\limits_{f} |f|$.
 
 # Procedimento Ford-Fulkerson
 
