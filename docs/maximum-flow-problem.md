@@ -65,8 +65,10 @@ Formalmente, o grafo residual de $G$ induzido por $f$ é $G_f = (V, E_f)$, onde:
 
 # Algoritmo Edmond-Karps
 
-TODO: Descrição do algoritmo Edmond-Karps e seu pseudo-código.
+O Algoritmo Edmon-Karps define especificamente como buscar os caminhos aumentantes $p$ utilizados no procedimento Ford-Fulkerson. No caso, escolhemos o caminho aumentante como o menor caminho de $s$ para $t$ em $G_f$.
 
+## Pseudocódigo
+![](imgs/edmond-karps-pseudocode.png)
 
 # Referências
 
