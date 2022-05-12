@@ -43,6 +43,26 @@ Nesse cenário, criamos uma nova fonte $s$, chamada de _supersource_, que possui
 
 Alguns autores consideram que esse algoritmo/procedimento utiliza uma estratégia gulosa (_greedy_) [4], enquanto outros classificam como uma estratégia _iterative improvement_ [1]. De qualquer forma, ambos convergem na estrutura geral do algoritmo.
 
+A ideia desse procedimento é melhorar iterativamente o valor fluxo [1]. Inicialmente, iniciamos com $f(v, u) = 0$ para todo $v, u \in V$. Em cada iteração, buscamos por um _caminho aumentante_ que permite aumentar $|f|$. Se não for possível encontrar tal caminho, concluímos que o fluxo atual é ótimo (_optimal_).
+
+A busca por um caminho aumentante é realizada em um outro grafo auxiliar chamado de _grafo residual_, denotado por $G_f$.
+
+## Grafo Residual
+
+Seja $G = (V, E)$ o grafo de rede com fonte $s$ e sorvedouro $t$. Seja $f$ um fluxo em $G$ e sejam $u, v \in V$ um par de vértices quaisquer. Definimos a capacidade residual $c_f(u,v)$ da seguinte forma:
+
+- $c(u,v) - f(u,v)$, se $(u,v) \in E$.
+- $f(v,u)$, se $(v,u) \in E$.
+- 0, caso contrário.
+
+Perceba que assumimos que $(u, v) \in E$ implica $(v, u, \notin E$, ou seja que $G$ não possui arestas paralelas.
+
+Formalmente, o grafo residual de $G$ induzido por $f$ é $G_f = (V, E_f)$, onde: $E_f = \{(u,v) \in V \times V\;|\; c_f(u, v) > 0\}$. Perceba que $G_f$ possui arestas paralelas. Usando o grafo residual, podemos encontrar um caminho aumentante $f^{'}$ para $G$.
+
+## Pseudocódigo
+![](imgs/ford-fulkerson-pseudocode.png)
+
+
 # Algoritmo Edmond-Karps
 
 TODO: Descrição do algoritmo Edmond-Karps e seu pseudo-código.
